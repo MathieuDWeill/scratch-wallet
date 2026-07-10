@@ -181,23 +181,22 @@ Autonomous finance should start with bounded downside.{extra}
 with st.sidebar:
     st.title("🎫 Scratch Wallet")
     st.caption("by Mathieu D. WEILL")
-    page = st.radio(
-        "Navigation",
-        [
-            "Demo",
-            "Scratch Card",
-            "Control Room",
-            "Claim Shield",
-            "Anchor / Deploy",
-            "Opportunities",
-            "Video / Submit",
-            "Risk Model",
-            "Submission",
-            "Form Fields",
-            "Codex",
-        ],
-        index=0,
-    )
+    pages = [
+        "Demo",
+        "Scratch Card",
+        "Control Room",
+        "Claim Shield",
+        "Anchor / Deploy",
+        "Opportunities",
+        "Video / Submit",
+        "Risk Model",
+        "Submission",
+        "Form Fields",
+        "Codex",
+    ]
+    requested_page = st.query_params.get("page", "Demo")
+    page_index = pages.index(requested_page) if requested_page in pages else 0
+    page = st.radio("Navigation", pages, index=page_index)
     st.divider()
     bankroll = st.number_input("Tiny wallet bankroll (USDC)", min_value=10.0, max_value=1000.0, value=100.0, step=10.0)
     mode_name = st.selectbox("Risk mode", list(RISK_MODES.keys()), index=1)

@@ -148,31 +148,24 @@ def closing_slide() -> Image.Image:
     return img
 
 
+def app_screenshot(name: str) -> Image.Image:
+    path = ROOT / "demo_recordings" / "scratch-wallet-app-captures" / "screenshots" / name
+    img = Image.open(path).convert("RGB")
+    return img.resize((WIDTH, HEIGHT), Image.LANCZOS)
+
+
 def main() -> None:
     FRAMES_DIR.mkdir(parents=True, exist_ok=True)
     slides = [
         hero_slide(),
-        slide(
-            "The problem",
-            "Autonomous trading bots often start from the riskiest possible default: connect a valuable main wallet and let software trade, claim, approve, and interact on its behalf.",
-            bullets=["Overtrading can erase small balances.", "Unsafe approvals can become catastrophic.", "Users rarely get a clear audit trail."],
-        ),
-        slide(
-            "The Scratch Wallet model",
-            "Scratch Wallet flips the default. It isolates risk inside a tiny wallet and makes the agent prove each action before it plays.",
-            bullets=["Risk modes: Chicken, Normal, Degen.", "Every opportunity is simulated first.", "The wallet stops automatically at loss limits."],
-        ),
-        slide(
-            "Live demo flow",
-            "The Streamlit demo walks judges through a daily autonomous scratch run.",
-            bullets=["Scan HashKey-style opportunities.", "Reject most trades by design.", "Play only small, risk-capped opportunities.", "Show a shareable Scratch Card and Control Room."],
-        ),
-        slide(
-            "Claim Shield",
-            "Unsafe claims and approvals are treated as first-class risk, not an afterthought.",
-            bullets=["Blocks fake airdrops and suspicious approvals.", "Explains why a claim is unsafe.", "Keeps the main wallet out of the flow."],
-        ),
+        app_screenshot("01_demo_intro.png"),
+        app_screenshot("02_demo_scratch_today.png"),
+        app_screenshot("04_scratch_card.png"),
+        app_screenshot("05_control_room.png"),
+        app_screenshot("06_claim_shield.png"),
+        app_screenshot("07_anchor_deploy.png"),
         proof_slide(),
+        app_screenshot("09_submission.png"),
         slide(
             "What is on-chain",
             "The contract does not custody funds and does not execute trades. It anchors decision evidence for review.",
