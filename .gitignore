@@ -13,3 +13,5 @@ scratch_wallet_report.json
 submission_bundle/
 scratch-wallet-submission-bundle.zip
 *Zone.Identifier*
+demo_recordings/**/frames/
+demo_recordings/**/preview.png

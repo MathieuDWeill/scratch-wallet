@@ -85,7 +85,7 @@ HashKey Chain mainnet deployment:
 ## Links
 - Live demo: TODO
 - GitHub repo: https://github.com/MathieuDWeill/scratch-wallet
-- Demo video: TODO
+- Demo video: upload `demo_recordings/scratch-wallet-dorahacks-submission/scratch_wallet_dorahacks_submission.mp4` to YouTube/DoraHacks
 - HashKey contract: https://hashkey.blockscout.com/address/0x33145C082811c5E88ce055DAD816aE540a89da94
 - Example transaction: https://hashkey.blockscout.com/tx/0x1bdbeac34080908bad17a491b76f212d455102195d2ff985cdd0384775329de6
 
