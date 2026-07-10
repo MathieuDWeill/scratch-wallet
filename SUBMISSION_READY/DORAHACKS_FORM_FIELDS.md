@@ -57,7 +57,7 @@ https://scratch-wallet.streamlit.app
 ## Demo video
 
 ```text
-Upload demo_recordings/scratch-wallet-dorahacks-submission/scratch_wallet_dorahacks_submission.mp4, then paste the YouTube/DoraHacks video URL here.
+https://youtu.be/-zdwef1rJs4
 ```
 
 ## HashKey Chain contract

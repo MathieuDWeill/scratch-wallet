@@ -543,7 +543,7 @@ elif page == "Submission":
 
 elif page == "Form Fields":
     st.title("DoraHacks Form Fields")
-    st.caption("Copy/paste fields for the BUIDL creation form. Replace URLs after GitHub, Streamlit, and YouTube are live.")
+    st.caption("Copy/paste fields for the BUIDL creation form.")
     vision = """Autonomous DeFi agents are exciting, but most of them start from a dangerous assumption: users connect a valuable main wallet and trust an automated system to trade, claim, approve, or interact with contracts.
 
 Scratch Wallet solves this by making autonomous DeFi start with bounded downside.
@@ -559,7 +559,7 @@ Scratch Wallet combines autonomous execution, bankroll limits, Claim Shield prot
     st.text_input("Is this BUIDL an AI Agent?", "Yes")
     st.text_input("GitHub", "https://github.com/mathieuweill/scratch-wallet")
     st.text_input("Project website", "https://scratch-wallet.streamlit.app")
-    st.text_input("Demo video", "https://www.youtube.com/watch?v=REPLACE_ME")
+    st.text_input("Demo video", "https://youtu.be/-zdwef1rJs4")
     st.text_area("Social links", "https://www.linkedin.com/in/mathieuweill\nhttps://x.com/mathieuweill\nhttps://mathieuweill.com", height=100)
     st.info("Logo file inside the repo: SUBMISSION_READY/scratch-wallet-logo-480.png")
     st.download_button("Download form fields markdown", Path("SUBMISSION_READY/DORAHACKS_FORM_FIELDS.md").read_text(encoding="utf-8"), file_name="DORAHACKS_FORM_FIELDS.md", use_container_width=True)

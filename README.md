@@ -14,6 +14,13 @@ Autonomous trading bots are usually framed as smart-money machines. Scratch Wall
 
 **Core principle:** autonomous finance should start with bounded downside.
 
+## Submission links
+
+- GitHub: `https://github.com/MathieuDWeill/scratch-wallet`
+- Demo video: `https://youtu.be/-zdwef1rJs4`
+- HashKey mainnet contract: `https://hashkey.blockscout.com/address/0x33145C082811c5E88ce055DAD816aE540a89da94`
+- Anchor transaction: `https://hashkey.blockscout.com/tx/0x1bdbeac34080908bad17a491b76f212d455102195d2ff985cdd0384775329de6`
+
 ## What is already built
 
 - Streamlit Community Cloud-ready app (`app.py`)
