@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+node_modules/
+artifacts/
+cache/
+.env.local
+.streamlit/secrets.toml
+scratch_wallet_report.json
+.pytest_cache/
+submission_bundle/
+scratch-wallet-submission-bundle.zip
+*Zone.Identifier*

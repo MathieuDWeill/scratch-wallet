@@ -1,0 +1,40 @@
+from .models import RiskMode
+
+RISK_MODES = {
+    "Chicken": RiskMode(
+        name="Chicken",
+        max_trade_pct=0.02,
+        max_daily_loss_pct=0.03,
+        max_total_drawdown_pct=0.08,
+        min_net_edge_bps=18,
+        max_slippage_bps=25,
+        min_liquidity_usd=25_000,
+        allowed_tokens=("USDC", "USDT"),
+        allowed_types=("stablecoin_route", "dex_route"),
+        claim_farming=False,
+    ),
+    "Normal": RiskMode(
+        name="Normal",
+        max_trade_pct=0.08,
+        max_daily_loss_pct=0.08,
+        max_total_drawdown_pct=0.20,
+        min_net_edge_bps=10,
+        max_slippage_bps=60,
+        min_liquidity_usd=8_000,
+        allowed_tokens=("USDC", "USDT", "HSK", "WETH"),
+        allowed_types=("stablecoin_route", "dex_route", "pool_imbalance", "incentive", "safe_claim"),
+        claim_farming=True,
+    ),
+    "Degen": RiskMode(
+        name="Degen",
+        max_trade_pct=0.20,
+        max_daily_loss_pct=0.20,
+        max_total_drawdown_pct=0.45,
+        min_net_edge_bps=5,
+        max_slippage_bps=140,
+        min_liquidity_usd=2_500,
+        allowed_tokens=("USDC", "USDT", "HSK", "WETH"),
+        allowed_types=("stablecoin_route", "dex_route", "pool_imbalance", "incentive", "safe_claim", "high_apy_trap"),
+        claim_farming=True,
+    ),
+}

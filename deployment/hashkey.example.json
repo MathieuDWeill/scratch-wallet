@@ -1,0 +1,9 @@
+{
+  "contract": "ScratchWalletRegistry",
+  "address": "0x...",
+  "deployTx": "0x...",
+  "chainId": 177,
+  "rpc": "https://mainnet.hsk.xyz",
+  "explorer": "https://hashkey.blockscout.com/address/0x...",
+  "deployedAt": "2026-07-10T00:00:00.000Z"
+}

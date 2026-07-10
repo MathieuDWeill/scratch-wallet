@@ -1,0 +1,13 @@
+{
+  "contract": "ScratchWalletRegistry",
+  "address": "0x33145C082811c5E88ce055DAD816aE540a89da94",
+  "deployTx": "0xe2e7bab050ba0696b92e64a29dc0c580ae686f8be4205f5fa62bbee5f3097aba",
+  "chainId": 177,
+  "rpc": "https://mainnet.hsk.xyz",
+  "explorer": "https://hashkey.blockscout.com/address/0x33145C082811c5E88ce055DAD816aE540a89da94",
+  "anchorTx": "0x1bdbeac34080908bad17a491b76f212d455102195d2ff985cdd0384775329de6",
+  "anchorExplorer": "https://hashkey.blockscout.com/tx/0x1bdbeac34080908bad17a491b76f212d455102195d2ff985cdd0384775329de6",
+  "fundingTx": "0x88262d336419b7592cf0582fb2aed823ce9c15033aab8a286c70f7195a2f96d4",
+  "fundingExplorer": "https://hashkey.blockscout.com/tx/0x88262d336419b7592cf0582fb2aed823ce9c15033aab8a286c70f7195a2f96d4",
+  "deployedAt": "2026-07-10T11:53:50.549Z"
+}

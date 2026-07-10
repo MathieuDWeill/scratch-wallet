@@ -1,0 +1,93 @@
+[
+  {
+    "type": "function",
+    "name": "anchorDecision",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {"name":"scratchWallet","type":"address"},
+      {"name":"opportunityHash","type":"bytes32"},
+      {"name":"decisionTypeHash","type":"bytes32"},
+      {"name":"riskModeHash","type":"bytes32"},
+      {"name":"startingBankroll","type":"uint256"},
+      {"name":"tradeSize","type":"uint256"},
+      {"name":"grossEdgeBps","type":"int256"},
+      {"name":"netEdgeBps","type":"int256"},
+      {"name":"riskScore","type":"uint256"},
+      {"name":"played","type":"bool"},
+      {"name":"reportHash","type":"bytes32"},
+      {"name":"reportURI","type":"string"}
+    ],
+    "outputs": [{"name":"id","type":"uint256"}]
+  },
+  {
+    "type": "function",
+    "name": "anchorSkippedOpportunity",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {"name":"scratchWallet","type":"address"},
+      {"name":"opportunityHash","type":"bytes32"},
+      {"name":"riskModeHash","type":"bytes32"},
+      {"name":"riskScore","type":"uint256"},
+      {"name":"reportHash","type":"bytes32"},
+      {"name":"reportURI","type":"string"}
+    ],
+    "outputs": [{"name":"id","type":"uint256"}]
+  },
+  {
+    "type": "function",
+    "name": "anchorWalletStopped",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {"name":"scratchWallet","type":"address"},
+      {"name":"reportHash","type":"bytes32"},
+      {"name":"reason","type":"string"}
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "anchorRugDodged",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {"name":"scratchWallet","type":"address"},
+      {"name":"opportunityHash","type":"bytes32"},
+      {"name":"reportHash","type":"bytes32"}
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "getDecision",
+    "stateMutability": "view",
+    "inputs": [{"name":"id","type":"uint256"}],
+    "outputs": [{
+      "components": [
+        {"name":"id","type":"uint256"},
+        {"name":"reporter","type":"address"},
+        {"name":"scratchWallet","type":"address"},
+        {"name":"opportunityHash","type":"bytes32"},
+        {"name":"decisionTypeHash","type":"bytes32"},
+        {"name":"riskModeHash","type":"bytes32"},
+        {"name":"startingBankroll","type":"uint256"},
+        {"name":"tradeSize","type":"uint256"},
+        {"name":"grossEdgeBps","type":"int256"},
+        {"name":"netEdgeBps","type":"int256"},
+        {"name":"riskScore","type":"uint256"},
+        {"name":"played","type":"bool"},
+        {"name":"reportHash","type":"bytes32"},
+        {"name":"createdAt","type":"uint256"},
+        {"name":"reportURI","type":"string"}
+      ],
+      "name":"",
+      "type":"tuple"
+    }]
+  },
+  {"type":"function","name":"getDecisionsByWallet","stateMutability":"view","inputs":[{"name":"wallet","type":"address"}],"outputs":[{"name":"","type":"uint256[]"}]},
+  {"type":"function","name":"getDecisionsByOpportunity","stateMutability":"view","inputs":[{"name":"opportunityHash","type":"bytes32"}],"outputs":[{"name":"","type":"uint256[]"}]},
+  {"type":"function","name":"nextDecisionId","stateMutability":"view","inputs":[],"outputs":[{"name":"","type":"uint256"}]},
+  {"type":"event","name":"ScratchDecisionAnchored","anonymous":false,"inputs":[{"indexed":true,"name":"id","type":"uint256"},{"indexed":true,"name":"reporter","type":"address"},{"indexed":true,"name":"scratchWallet","type":"address"},{"indexed":false,"name":"played","type":"bool"},{"indexed":false,"name":"opportunityHash","type":"bytes32"},{"indexed":false,"name":"reportHash","type":"bytes32"}]},
+  {"type":"event","name":"OpportunityPlayed","anonymous":false,"inputs":[{"indexed":true,"name":"id","type":"uint256"},{"indexed":true,"name":"scratchWallet","type":"address"},{"indexed":false,"name":"netEdgeBps","type":"int256"}]},
+  {"type":"event","name":"OpportunitySkipped","anonymous":false,"inputs":[{"indexed":true,"name":"id","type":"uint256"},{"indexed":true,"name":"scratchWallet","type":"address"},{"indexed":false,"name":"riskScore","type":"uint256"}]},
+  {"type":"event","name":"ScratchWalletStopped","anonymous":false,"inputs":[{"indexed":true,"name":"scratchWallet","type":"address"},{"indexed":true,"name":"reportHash","type":"bytes32"},{"indexed":false,"name":"reason","type":"string"}]},
+  {"type":"event","name":"RugDodged","anonymous":false,"inputs":[{"indexed":true,"name":"scratchWallet","type":"address"},{"indexed":true,"name":"opportunityHash","type":"bytes32"},{"indexed":false,"name":"reportHash","type":"bytes32"}]}
+]

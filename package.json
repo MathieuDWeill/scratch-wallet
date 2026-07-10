@@ -1,0 +1,21 @@
+{
+  "name": "scratch-wallet-hashkey-deploy",
+  "private": true,
+  "version": "0.2.0",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:hashkey": "hardhat run scripts/deploy.js --network hashkey",
+    "verify:hashkey": "hardhat verify --network hashkey $SCRATCH_REGISTRY_ADDRESS",
+    "test": "hardhat test",
+    "preflight": "python scripts/preflight.py",
+    "wallet:new": "python scripts/generate_burner_wallet.py",
+    "secrets:write": "python scripts/write_streamlit_secrets_from_env.py",
+    "bundle": "python scripts/prepare_submission_bundle.py",
+    "deploy:hashkey:full": "bash scripts/deploy_hashkey.sh"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.18"
+  }
+}

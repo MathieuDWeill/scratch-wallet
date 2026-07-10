@@ -1,0 +1,15 @@
+{
+  "name": "Scratch Wallet",
+  "builder": "Mathieu D. WEILL",
+  "category": "DeFi, AI, Security",
+  "is_ai_agent": "Yes",
+  "github": "https://github.com/mathieuweill/scratch-wallet",
+  "website": "https://scratch-wallet.streamlit.app",
+  "demo_video": "https://www.youtube.com/watch?v=REPLACE_ME",
+  "social_links": [
+    "https://www.linkedin.com/in/mathieuweill",
+    "https://x.com/mathieuweill",
+    "https://mathieuweill.com"
+  ],
+  "tagline": "A lottery ticket that knows when not to play."
+}
